@@ -1,0 +1,171 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: poppins;
+  list-style: none;
+  text-decoration: none;
+}
+:root {
+  --bg-tr-color: #ffffff4d;
+  --text-color: #fff;
+}
+body {
+  background: hsla(213, 77%, 14%, 1);
+
+  background: linear-gradient(
+    90deg,
+    hsla(213, 77%, 14%, 1) 0%,
+    hsla(202, 27%, 45%, 1) 100%
+  );
+
+  background: -moz-linear-gradient(
+    90deg,
+    hsla(213, 77%, 14%, 1) 0%,
+    hsla(202, 27%, 45%, 1) 100%
+  );
+
+  background: -webkit-linear-gradient(
+    90deg,
+    hsla(213, 77%, 14%, 1) 0%,
+    hsla(202, 27%, 45%, 1) 100%
+  );
+
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#08203E", endColorstr="#557C93", GradientType=1 );
+
+  width: 100%;
+  min-height: 100vh;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2% 0;
+}
+.header-container h1 {
+  font-size: 3rem;
+  font-variant: small-caps;
+  color: var(--text-color);
+  width: max-content;
+  border: 0.2rem double #000;
+  text-shadow: 0 0 0.7rem #000, 0 0 0.8rem #000;
+  padding: 0.3% 1%;
+  border-radius: 7rem;
+}
+
+.content-area {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-tr-color);
+  margin: 3%;
+  min-height: 5rem;
+  flex-direction: column;
+  border-radius: 0.4rem;
+  box-shadow: 0px 0px 20px #000, 0px 0px 30px #000;
+}
+.content-area form {
+  margin-top: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  margin: 1rem auto;
+}
+.content-area form input {
+  flex: 1;
+  width: 45rem;
+  height: 3rem;
+  padding-left: 1rem;
+  border: none;
+  outline: none;
+  border-radius: 0.4rem;
+  font-size: 1.2rem;
+}
+
+.content-area form button {
+  border: none;
+  outline: none;
+  padding: 0.3rem;
+  height: 2.9rem;
+  width: 5rem;
+  border-radius: 0.4rem;
+  margin: 0;
+  transition: 0.5s all;
+}
+.content-area form button:hover {
+  background-color: hsla(203, 68%, 10%, 0.674);
+  color: #fff;
+}
+#added-tasks {
+  margin-bottom: 2rem;
+}
+#added-tasks li {
+  list-style: none;
+  font-size: 17px;
+  padding: 12px 8px 12px 50px;
+  user-select: none;
+  -webkit-user-select: none;
+  cursor: pointer;
+  position: relative;
+  border: 1px solid #181818;
+  border-radius: 0.4rem;
+  margin: 0.7rem auto;
+  min-width: 25vw;
+}
+ul li::before {
+  content: "";
+  position: absolute;
+  height: 28px;
+  width: 28px;
+  border-radius: 50%;
+  background: url(/veriTech/task-3/assets/unchecked.png);
+  background-size: cover;
+  background-position: center;
+  top: 10px;
+  left: 6px;
+}
+
+ul li.checked {
+  color: #555;
+  text-decoration: line-through;
+}
+ul li.checked::before {
+  background: url(/veriTech/task-3/assets/checked.png);
+  background-color: #fff;
+  content: "";
+  position: absolute;
+  height: 28px;
+  width: 28px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  top: 12px;
+  left: 8px;
+}
+ul li span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 0;
+  top: 6px;
+  width: 28px;
+  height: 28px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #555;
+  line-height: 40px;
+  text-align: center;
+  margin: 0.4rem;
+  border: 2px solid #000;
+  border-radius: 50%;
+  transition: 0.5s ease;
+}
+ul li span:hover {
+  background-color: #555;
+  color: #000;
+}

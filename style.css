@@ -122,7 +122,7 @@ ul li::before {
   height: 28px;
   width: 28px;
   border-radius: 50%;
-  background: url(/veriTech/task-3/assets/unchecked.png);
+  background: url(./unchecked.png);
   background-size: cover;
   background-position: center;
   top: 10px;
@@ -134,7 +134,7 @@ ul li.checked {
   text-decoration: line-through;
 }
 ul li.checked::before {
-  background: url(/veriTech/task-3/assets/checked.png);
+  background: url(./checked.png);
   background-color: #fff;
   content: "";
   position: absolute;
